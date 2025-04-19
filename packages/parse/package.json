@@ -1,0 +1,28 @@
+{
+  "name": "@parseauthkit/parse",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
+    "lint": "eslint . --max-warnings 0",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@internals/common": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "^8.2.2",
+    "typescript": "^5.8.2",
+    "eslint": "^8.57.0",
+    "@types/parse": "^3.0.9"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

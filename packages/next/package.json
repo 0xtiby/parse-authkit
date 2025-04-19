@@ -1,0 +1,49 @@
+{
+  "name": "@parseauthkit/next",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "require": "./dist/client.js",
+      "import": "./dist/client.mjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup --format esm,cjs --dts",
+    "dev": "tsup --watch --format esm,cjs --dts",
+    "lint": "eslint . --max-warnings 0",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@internals/common": "workspace:*",
+    "iron-session": "^8.0.0",
+    "uuid": "^11.1.0"
+  },
+  "peerDependencies": {
+    "next": ">=15.0.0",
+    "parse": ">=6.0.0",
+    "react": ">=19.0.0",
+    "react-dom": ">=19.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.2.2",
+    "typescript": "^5.8.2",
+    "eslint": "^8.57.0",
+    "@types/parse": "^3.0.9",
+    "@types/react": "^19.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
