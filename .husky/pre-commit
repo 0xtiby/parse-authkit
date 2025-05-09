@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Check if any files in packages directory have been modified
+if git diff --cached --name-only | grep -q "^packages/"; then
+  # Check if a changeset exists
+  if [ ! -d ".changeset" ] || [ -z "$(ls -A .changeset)" ]; then
+    echo "❌ You must create a changeset before committing changes to packages."
+    echo "Run 'pnpm changeset' to create a changeset."
+    exit 1
+  fi
+fi 

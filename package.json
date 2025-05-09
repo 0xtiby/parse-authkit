@@ -10,9 +10,17 @@
     "publish:next": "cd packages/next && pnpm publish",
     "publish:auth-adapters": "cd packages/auth-adapters && pnpm publish",
     "publish:parse": "cd packages/parse && pnpm publish",
-    "publish:all": "pnpm build && pnpm publish:next && pnpm publish:auth-adapters && pnpm publish:parse"
+    "publish:all": "pnpm build && pnpm publish:next && pnpm publish:auth-adapters && pnpm publish:parse",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm build && changeset publish",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.3",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "husky": "^9.1.7",
     "prettier": "^3.5.3",
     "turbo": "^2.5.0",
     "typescript": "5.8.2"
