@@ -14,7 +14,8 @@ import { parseConfig } from "./parse";
 import { SessionService } from "./session";
 import { Attributes } from "parse";
 import ParseUser from "parse/types/ParseUser";
-import { LOGOUT_FUNCTION_NAME } from "@internals/common";
+
+export const LOGOUT_FUNCTION_NAME = "parseauthkit-logout";
 
 export class AuthServiceError extends Error {
   constructor(

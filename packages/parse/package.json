@@ -13,9 +13,7 @@
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf dist"
   },
-  "dependencies": {
-    "@internals/common": "workspace:*"
-  },
+  "dependencies": {},
   "devDependencies": {
     "tsup": "^8.2.2",
     "typescript": "^5.8.2",
